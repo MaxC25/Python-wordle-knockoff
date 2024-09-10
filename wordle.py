@@ -3,7 +3,6 @@ from linecache import getline,clearcache
 from sys import exit
 w=getline(r"WORDS.txt", randbelow(3104)).rstrip("\n")
 clearcache()
-print(w)
 del randbelow,getline,clearcache
 for A in range(5):
   i=input("5 letter word:")
