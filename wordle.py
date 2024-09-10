@@ -7,15 +7,20 @@ w=getline(r"WORDS.txt", randbelow(3103)).rstrip("\n")
 clearcache()
 del randbelow,getline,clearcache
 for A in range(5):
-  i=input("5 letter word:")
-  cor,xcor,WP='','',''
+  i,o,m=input("5 letter word:"),"",2
   if i==w:
     print("got it")
     exit()
   else:
     for B in range(0,5):
-      if i[B]==w[B]:cor=cor+w[B]
-      elif i[B] in w:WP=WP+i[B]
-      else:cor,WP,xcor=cor+' ',WP+' ',xcor+i[B]
-  print('\n\033[92m'+cor+'\033[0m\n'+WP+'\n\033[91m'+xcor+'\033[0m')
-print(w+"failed")
+      if i[B]==w[B]:
+        if m!=1:o,m=o+'\033[36m'+i[B],1
+        else:o=o+i[B]
+      elif i[B] in w:
+        if m!=2:o,m=o+'\033[0m'+i[B],2
+        else:o=o+i[B]
+      else:
+        if m!=0:o,m=o+'\033[91m'+i[B],0
+        else:o=o+i[B]
+  print(o+'\033[0m')
+print(w+" failed")
