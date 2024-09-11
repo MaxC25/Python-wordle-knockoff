@@ -9,7 +9,7 @@ del randbelow,getline,clearcache
 for A in range(5):
   i,o,m,v=input("5 letter word:"),"",2,open("Valid.txt")
   V=v.read()
-  while i not in v:
+  while i not in V:
     i=input("5 letter word:")
   if i==w:
     print("got it")
