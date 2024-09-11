@@ -6,9 +6,10 @@ os.system("")
 w=getline(r"WORDS.txt", randbelow(3103)).rstrip("\n")
 clearcache()
 del randbelow,getline,clearcache
+v=open("Valid.txt")
+V=v.read()
 for A in range(5):
-  i,o,m,v=input("5 letter word:"),"",2,open("Valid.txt")
-  V=v.read()
+  i,o,m=input("5 letter word:"),"",2
   while i not in V:
     i=input("5 letter word:")
   if i==w:
