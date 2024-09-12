@@ -2,9 +2,7 @@ import os
 from secrets import randbelow
 from linecache import getline,clearcache
 from sys import exit
-if os.name in ['nt','ce']:try:from colorama import just_fix_windows_console
 os.system("")
-try:os.system("ansi")
 w=getline(r"WORDS.txt", randbelow(3103)).rstrip("\n")
 clearcache()
 del randbelow,getline,clearcache
