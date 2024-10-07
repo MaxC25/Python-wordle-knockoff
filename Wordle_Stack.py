@@ -2,7 +2,7 @@ import os
 from secrets import randbelow
 from linecache import getline,clearcache
 from sys import exit
-if os.name in ['NT','CE']:
+if os.name in ['nt','ce']:
   def cls():os.system('cls')
   try:
     from colorama import just_fix_windows_console
